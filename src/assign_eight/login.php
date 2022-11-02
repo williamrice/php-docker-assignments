@@ -1,4 +1,16 @@
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/1/22
+-- Assignment: Assignment Eight 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache
+-- Notes:  
+--
+-- This page contains the script 9.6 (login.php) from the text book. 
+------------------------------------------------------------------------------->
 <?php
+
 ob_start();
 // Set the page title and include the header file
 define('TITLE', 'Login');

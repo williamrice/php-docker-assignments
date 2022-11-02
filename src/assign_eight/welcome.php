@@ -1,3 +1,15 @@
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/1/22
+-- Assignment: Assignment Eight 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache
+-- Notes:  
+--
+-- This page contains the script 9.8 (welcome.php) from the text book. 
+------------------------------------------------------------------------------->
+
 <?php
 
 session_start();

@@ -1,0 +1,68 @@
+<! ---------------------------------------------------------------------------------------------------------------------- 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 09/24/2022 
+-- Assignment: Assignment Five 
+-- Dev Env: Mac OS | Visual Studio Code | Docker php:7.4-apache
+-- Notes: Form requires all fields to be completed
+-- This page contains an html form allows a user to input their name, phone number, email address and notes. 
+-- They will then submit the form to be processed by PHP code to output data to the user. 
+-------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment Four</title>
+    <style></style>
+  </head>
+
+  <body>
+    <h1>Please enter your info</h1>
+    <table>
+      <form action="display_user_info.php" method="post">
+        <tr>
+          <td>
+            <label for="full_name">Full Name:</label>
+          </td>
+          <td>
+            <input type="text" name="full_name" size="30" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="phone_number">Telephone Number:</label>
+          </td>
+          <td>
+            <input type="text" name="phone_number" size="30" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email_address">Email Address:</label>
+          </td>
+          <td>
+            <input type="text" name="email_address" size="30" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="notes">Notes:</label>
+          </td>
+          <td>
+            <textarea name="notes" rows="7" cols="24" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+          <td>
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>

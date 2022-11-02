@@ -1,0 +1,135 @@
+<! ---------------------------------------------------------------------------------------------------------------------- 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 09/24/2022 
+-- Assignment: Assignment Five 
+-- Dev Env: Mac OS | Visual Studio Code | Docker php:7.4-apache
+-- Notes: Form validation happens on submit. We allow blank values to be submitted in 
+-- order to satisfy the requirements of this assignment with the validation occurring on the 
+-- server side. 
+
+-- This page contains an html form allows a user to place a coffee order.  
+-------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment Six</title>
+    <style>
+      td, tr{
+        padding: .3em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>The Coffee House</h1>
+    <br />
+    <h2>Order Form</h2>
+    <table>
+      <form action="display_order_info.php" method="post">
+        <tr>
+          <td>
+            <label for="coffee_name">Coffee:</label>
+          </td>
+          <td>
+            <select name="coffee_name"">
+              <option value="" disabled selected>Choose Coffee:</option>
+              <option value="Boca Villa">Boca Villa</option>
+              <option value="South Beach Rhythm">South Beach Rhythm</option>
+              <option value="Pumpkin Paradise">Pumpkin Paradise</option>
+              <option value="Sumatran Sunset">Sumatran Sunset</option>
+              <option value="Ball Bature">Ball Bature</option>
+              <option value="Double Dark">Double Dark</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="coffee_type">Type:</label>
+          </td>
+          <td>
+            <input type="radio"  name="coffee_type" value="regular">
+            <label for="coffee_type">Regular</label><br>
+            <input type="radio"  name="coffee_type" value="decaffinated">
+            <label for="coffee_type">Decaffinated</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="quantity">Quantity (in pounds):</label>
+          </td>
+          <td>
+            <input type="text" name="quantity" size="5" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="name">Name:</label>
+          </td>
+          <td>
+            <input type="text" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">E-mail address:</label>
+          </td>
+          <td>
+            <input type="text" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="phone_number">Telephone #:</label>
+          </td>
+          <td>
+            <input type="text" name="phone_number" size="15"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address:</label>
+          </td>
+          <td>
+            <input type="text" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="city">City:</label>
+          </td>
+          <td>
+            <input type="text" name="city"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="state">State:</label>
+          </td>
+          <td>
+            <input type="text" name="state" size="6"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="zip_code">Zip:</label>
+          </td>
+          <td>
+            <input type="text" name="zip_code" size="12"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+          <td>
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>

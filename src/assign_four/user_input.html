@@ -1,0 +1,72 @@
+<! ---------------------------------------------------------------------------------------------------------------------- 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 09/22/2022 
+-- Assignment: Assignment Four 
+-- Dev Env: Mac OS | Visual Studio Code | Docker php:7.4-apache
+-- Notes: None on this page
+-- This page contains an html form allows a user to input their name, hourly rate and hours worked. They will 
+-- then submit the form to be processed by PHP code to output data to the user. 
+-------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment Four</title>
+    <style>
+      td:not(:first-child) {
+        padding-left: 3em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Please enter employee info</h1>
+    <table>
+      <form action="display_paycheck.php" method="post">
+        <tr>
+          <td>
+            <label for="first_name">First Name:</label>
+          </td>
+          <td>
+            <input type="text" name="first_name" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="last_name">Last Name:</label>
+          </td>
+          <td>
+            <input type="text" name="last_name" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="hours_worked">Weekly Hours Worked:</label>
+          </td>
+          <td>
+            <input type="number" name="hours_worked" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="hourly_rate">Hourly Rate $:</label>
+          </td>
+          <td>
+            <input type="number" name="hourly_rate" step="any" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Submit" />
+          </td>
+          <td>
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </form>
+    </table>
+  </body>
+</html>

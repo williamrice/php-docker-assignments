@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Indicate that they are logged in
       $loggedin = true;
     } else { // incorrect login
-      $error = 'The submitted email address andn password do not match those on file!';
+      $error = 'The submitted email address and password do not match those on file!';
     }
   } else {
     $error = 'Please make sure you enter bnot an email address and a password!';

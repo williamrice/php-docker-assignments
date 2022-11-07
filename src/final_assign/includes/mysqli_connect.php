@@ -14,9 +14,9 @@
 
 /* this script establishes connection to the database and the character set
  * for communications */
-
-// Connect
-$dbc = mysqli_connect('localhost', 'user', 'password', 'quotes');
+// Connect - hostname is a random string because docker. We should be using
+// environment variables anyways :)
+$dbc = mysqli_connect('7ae8ca6e9dd9', 'root', 'password', 'db');
 
 // Set the character set
 mysqli_set_charset($dbc, 'utf8');

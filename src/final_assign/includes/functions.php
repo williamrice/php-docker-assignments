@@ -16,7 +16,7 @@
 // This function checks if the user is an administrator.
 // This function takes two optional values.
 // This functions returns a boolean value.
-function is_administrator($name= "Samuel", $value = "Clemons"){
+function is_administrator($name= "Samuel", $value = "Clemens"){
 
   // Check for the cookie and check it's value
   if (isset($_COOKIE[$name]) && ($_COOKIE[$name] == $value)) {

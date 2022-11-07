@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
   if (!empty($_POST['quote']) && !empty($_POST['source'])) {
 
     // Need the database connection:
-    include('../mysqli_connect.php');
+    include('includes/mysqli_connect.php');
 
     // Prepare the values for storing:
     $quote = mysqli_real_escape_string($dbc, trim(strip_tags($_POST['quote'])));

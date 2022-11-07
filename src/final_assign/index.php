@@ -9,7 +9,7 @@
 include('templates/header.html');
 
 // Need the database connection:
-include('../mysqli_connect.php');
+include('includes/mysqli_connect.php');
 
 // Define the query...
 // Change the particulars depending upon values passed in the URL:

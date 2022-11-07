@@ -16,7 +16,7 @@ if (!is_administrator()) {
 }
 
 // Need the database connection:
-include('../mysqli_connect.php');
+include('includes/mysqli_connect.php');
 
 // Define the query:
 $query = 'SELECT id, quote, source, favorite FROM quotes ORDER BY date_entered DESC';

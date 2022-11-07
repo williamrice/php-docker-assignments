@@ -16,7 +16,7 @@ if (!is_administrator()) {
 }
 
 // Need the database connection:
-include('../mysqli_connect.php');
+include('includes/mysqli_connect.php');
 
 if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) { // Display the quote in a form:
 

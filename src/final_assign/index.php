@@ -1,4 +1,16 @@
-<?php 
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/21/22
+-- Assignment: Final Assignment 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache mysql:8.0.31
+-- Notes:  
+--
+-- This page contains the script 13.11 (index.php) from the text book. 
+------------------------------------------------------------------------------->
+
+<?php
 
 /* This is the home page for this site. It displays:
 - The most recent quote (default)
@@ -44,7 +56,6 @@ if ($result = mysqli_query($dbc, $query)) {
 		<a href=\"delete_quote.php?id={$row['id']}\">Delete</a>
 		</p>\n";
 	}
-
 } else { // Query didn't run.
 	print '<p class="error">Could not retrieve the data because:<br>' . mysqli_error($dbc) . '.</p><p>The query being run was: ' . $query . '</p>';
 } // End of query IF.

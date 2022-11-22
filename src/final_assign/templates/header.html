@@ -1,3 +1,15 @@
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/21/22
+-- Assignment: Final Assignment 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache mysql:8.0.31
+-- Notes:  
+--
+-- This page contains the script 13.3 (header.html) from the text book. 
+------------------------------------------------------------------------------->
+
 <?php
 
 // Include the functions script
@@ -7,8 +19,8 @@ include('includes/functions.php'); ?>
 <html lang="en">
   <head>
     <title>
-      < ?php // PHP title if defined if(defined('TITLE')) { print TITLE; } else
-      { print 'My Site of Quotes' ; }?>
+      <?php if(defined('TITLE')) { print TITLE; } else { print 'My Site of
+      Quotes' ; }?>
     </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

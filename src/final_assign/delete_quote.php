@@ -1,4 +1,16 @@
-<?php 
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/21/22
+-- Assignment: Final Assignment 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache mysql:8.0.31
+-- Notes:  
+--
+-- This page contains the script 13.10 (delete_quote.php) from the text book. 
+------------------------------------------------------------------------------->
+
+<?php
 
 /* This script deletes a quote. */
 
@@ -18,7 +30,7 @@ if (!is_administrator()) {
 // Need the database connection:
 include('includes/mysqli_connect.php');
 
-if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) { // Display the quote in a form:
+if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0)) { // Display the quote in a form:
 
 	// Define the query:
 	$query = "SELECT quote, source, favorite FROM quotes WHERE id={$_GET['id']}";
@@ -39,12 +51,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) { // Di
 		print '</div><br><input type="hidden" name="id" value="' . $_GET['id'] . '">
 		<p><input type="submit" name="submit" value="Delete this Quote!"></p>
 		</form>';
-
 	} else { // Couldn't get the information.
 		print '<p class="error">Could not retrieve the quote because:<br>' . mysqli_error($dbc) . '.</p><p>The query being run was: ' . $query . '</p>';
 	}
-
-} elseif (isset($_POST['id']) && is_numeric($_POST['id']) && ($_POST['id'] > 0) ) { // Handle the form.
+} elseif (isset($_POST['id']) && is_numeric($_POST['id']) && ($_POST['id'] > 0)) { // Handle the form.
 
 	// Define the query:
 	$query = "DELETE FROM quotes WHERE id={$_POST['id']} LIMIT 1";
@@ -56,7 +66,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id']) && ($_GET['id'] > 0) ) { // Di
 	} else {
 		print '<p class="error">Could not delete the blog entry because:<br>' . mysqli_error($dbc) . '.</p><p>The query being run was: ' . $query . '</p>';
 	}
-
 } else { // No ID received.
 	print '<p class="error">This page has been accessed in error.</p>';
 } // End of main IF.

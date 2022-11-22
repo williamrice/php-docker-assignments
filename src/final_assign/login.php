@@ -1,3 +1,15 @@
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/21/22
+-- Assignment: Final Assignment 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache mysql:8.0.31
+-- Notes:  
+--
+-- This page contains the script 13.5 (login.php) from the text book. 
+------------------------------------------------------------------------------->
+
 <?php
 
 // SEt two variables with default values:
@@ -35,7 +47,7 @@ if ($error) {
 
 // Indicate the user is logged in, or show the form:
 if ($loggedin) {
-  print '<p>You are now looged in!</p>';
+  print '<p>You are now logged in!</p>';
 } else {
   print '<h2>Login Form</h2>
     <form action="login.php" method="post">

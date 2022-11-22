@@ -1,4 +1,16 @@
-<?php 
+<!------------------------------------------------------------------------------ 
+-- Name: William Rice 
+-- Class: CIT 253 
+-- Instructor: Bradly Karr 
+-- Date: 11/21/22
+-- Assignment: Final Assignment 
+-- Dev Env: Arch Linux | Neovim | Docker php:7.4-apache mysql:8.0.31
+-- Notes:  
+--
+-- This page contains the script 13.8 (view_quotes.php) from the text book. 
+------------------------------------------------------------------------------->
+
+<?php
 
 /* This script lists every quote. */
 
@@ -38,7 +50,6 @@ if ($result = mysqli_query($dbc, $query)) {
 		// Add administrative links:
 		print "<p><b>Quote Admin:</b> <a href=\"edit_quote.php?id={$row['id']}\">Edit</a> <->
 		<a href=\"delete_quote.php?id={$row['id']}\">Delete</a></p></div>\n";
-
 	} // End of while loop.
 
 } else { // Query didn't run.
